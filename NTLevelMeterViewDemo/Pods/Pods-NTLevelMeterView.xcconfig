@@ -1,0 +1,1 @@
+PODS_NTLEVELMETERVIEW_OTHER_LDFLAGS = -framework QuartzCore

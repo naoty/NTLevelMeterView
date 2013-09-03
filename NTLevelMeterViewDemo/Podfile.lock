@@ -1,0 +1,14 @@
+PODS:
+  - NTLevelMeterView (0.0.1)
+
+DEPENDENCIES:
+  - NTLevelMeterView (from `..`)
+
+EXTERNAL SOURCES:
+  NTLevelMeterView:
+    :path: ..
+
+SPEC CHECKSUMS:
+  NTLevelMeterView: b8ea07599435baa737c5b40514a200c46e3a5439
+
+COCOAPODS: 0.23.0
