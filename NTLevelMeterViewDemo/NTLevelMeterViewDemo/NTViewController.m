@@ -7,23 +7,35 @@
 //
 
 #import "NTViewController.h"
+#import "NTLevelMeterView.h"
 
 @interface NTViewController ()
+
+@property (nonatomic) NTLevelMeterView *levelMeterView;
 
 @end
 
 @implementation NTViewController
 
+const int kMaxLevel = 10;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.levelMeterView = [[NTLevelMeterView alloc] initWithFrame:CGRectMake(20.0, 20.0, 200.0, 44.0) maxLevel:kMaxLevel];
+    [self.view addSubview:self.levelMeterView];
+    [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateLevel) userInfo:nil repeats:YES];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (void)updateLevel
+{
+    self.levelMeterView.level = arc4random_uniform(kMaxLevel);
 }
 
 @end

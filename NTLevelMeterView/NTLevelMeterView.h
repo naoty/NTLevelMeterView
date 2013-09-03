@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NTLevelMeterView : NSObject
+@interface NTLevelMeterView : UIView
+
+@property (nonatomic) NSUInteger level;
+ 
+- (NTLevelMeterView *)initWithFrame:(CGRect)frame maxLevel:(NSUInteger)maxLevel;
 
 @end
